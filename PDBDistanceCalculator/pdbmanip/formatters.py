@@ -36,6 +36,7 @@ class JSONNeighborFormatter(object):
         }
 
     def write_listing(self, file):
+        pass
 
     def __init__(self, params):
         '''
