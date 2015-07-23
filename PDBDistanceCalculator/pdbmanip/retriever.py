@@ -2,11 +2,11 @@
 @author: dansaper
 '''
 
-from Bio.PDB import PDBList, PDBParser
+from Bio.PDB import PDBList
 
 class PDBRetriever:
     '''
-    This class retrieves the requested PDB files and parses them
+    This class retrieves the requested PDB files
     '''
 
     def __init__(self, codes):
