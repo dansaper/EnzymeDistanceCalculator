@@ -20,10 +20,10 @@ class AtomCompareFilter(object):
 
 class FlavinCompareFilter(AtomCompareFilter):
     '''
-    Checks if atom_a and atom_b are on the isoalloxazine of a single residue
+    We don't compare atoms on the same isoalloxazine
     '''
     def should_compare(self, atom_a, atom_b):
-        return (fl.on_same_residue(atom_a, atom_b)
+        return not (fl.on_same_residue(atom_a, atom_b)
                 and fl.in_isoalloxazine(atom_a)
                 and fl.in_isoalloxazine(atom_b)
-                and super().should_compare(atom_a, atom_b))
+            ) and super().should_compare(atom_a, atom_b)
