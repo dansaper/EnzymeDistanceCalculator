@@ -4,7 +4,7 @@ Created on Jul 23, 2015
 @author: dansaper
 '''
 
-from pdbmanip.retriever import PDBRetriever, subunits_dir
+from pdbmanip.retriever import PDBRetriever
 from Bio.PDB.PDBParser import PDBParser
 import argparse
 import os
@@ -61,7 +61,7 @@ def generate_distance_files(subunits_dir, distance_dir, codes, max_distance, for
                 formatter.write_listing(structure, listings, output_path)
 
 
-if __name__ == '__main__':
+def flavin_funct():
     args = get_arguments()
     
     if args.input_file:
