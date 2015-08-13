@@ -74,6 +74,10 @@ class KdTreeSearcher(StructureSearcher):
     '''
     A StructureSearcher that uses a kd-tree to lower the search space (see https://en.wikipedia.org/wiki/K-d_tree)
     '''
+    #While we could use BIO.PDB.NeighborSearch, we get less flexibility for which atoms we care about.
+    #However, it would probably be much faster
+    #    depending on how fast filtering out the unwanted atoms from the full list of neighbors is
+    #    since that requires another pass through the array.
     
     def __init__(self, all_atoms, target_filter, compare_filter):
         self.target_filter = target_filter
