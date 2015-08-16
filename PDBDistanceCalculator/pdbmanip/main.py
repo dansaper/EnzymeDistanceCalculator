@@ -82,4 +82,8 @@ def flavin_funct():
         formatter = formatters.PDBStyleNeighborFormatter
     
     generate_distance_files(subunits_dir, distance_dir, codes, max_distance, formatter)
+
+
+if __name__ == "__main__":
+    flavin_funct()
     
